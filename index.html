@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Java-Script practice</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(bg.png);
+            background-size: cover;
+        }
+        .main::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 0;
+            opacity: 0.7;
+        }
+        .box{
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex">
+   
+    <div class="main d-flex flex-column align-items-center justify-content-center">
+        <div class="11 box d-flex">
+            <img src="genere.png" id="img1" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 mb-0" style="z-index: 20;font-size: 40px;" id="p1"><i>Movie Generes</i></p>
+            <button class="btn btn-outline-primary px-4 mt-0" style="z-index: 20;" id="b1" onclick="invisible1()">Next</button>
+        </div>
+        <div class="22 box d-flex">
+            <img src="d.webp" id="img2" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p2"><i>Genere 1 : Drama</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b2" onclick="invisible2()">Next</button>
+        </div>
+        <div class="33 box d-flex">
+            <img src="f.webp" id="img3" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p3"><i>Genere 2 : Family</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b3" onclick="invisible3()">Next</button>
+        </div>
+        <div class="44 box d-flex">
+            <img src="m.webp" id="img4" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p4"><i>Genere 3 : Mythology</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b4" onclick="invisible4()">Next</button>
+        </div>
+        <div class="55 box d-flex">
+            <img src="r.webp" id="img5" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p5"><i>Genere 4 : Romance</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b5" onclick="invisible5()">Next</button>
+        </div>
+        <div class="66 box d-flex">
+            <img src="c.webp" id="img6" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p6"><i>Genere 5 : Comedy</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b6" onclick="invisible6()">Next</button>
+        </div>
+        <div class="77 box d-flex">
+            <img src="h.png" id="img7" class="d-none" style="z-index: 20;border-radius: 20px;width: 500px;border: 1px solid white;" alt="">
+            <p class="text-light mt-4 d-none" style="z-index: 20;font-size: 40px;" id="p7"><i>Genere 1 : Horror</i></p>
+            <button class="btn btn-outline-primary px-4 mt-4 d-none" style="z-index: 20;" id="b7" onclick="invisible7()">Next</button>
+        </div>
+    </div>
+    <script>
+        function invisible1(){
+            document.getElementById('img1').classList.toggle('d-none');
+            document.getElementById('img2').classList.toggle('d-none');
+            document.getElementById('p1').classList.toggle('d-none');
+            document.getElementById('p2').classList.toggle('d-none');
+            document.getElementById('b1').classList.toggle('d-none');
+            document.getElementById('b2').classList.toggle('d-none');
+        }
+        function invisible2(){
+            document.getElementById('img2').classList.toggle('d-none');
+            document.getElementById('img3').classList.toggle('d-none');
+            document.getElementById('p2').classList.toggle('d-none');
+            document.getElementById('p3').classList.toggle('d-none');
+            document.getElementById('b2').classList.toggle('d-none');
+            document.getElementById('b3').classList.toggle('d-none');
+        }
+        function invisible3(){
+            document.getElementById('img3').classList.toggle('d-none');
+            document.getElementById('img4').classList.toggle('d-none');
+            document.getElementById('p3').classList.toggle('d-none');
+            document.getElementById('p4').classList.toggle('d-none');
+            document.getElementById('b3').classList.toggle('d-none');
+            document.getElementById('b4').classList.toggle('d-none');
+        }
+        function invisible4(){
+            document.getElementById('img4').classList.toggle('d-none');
+            document.getElementById('img5').classList.toggle('d-none');
+            document.getElementById('p4').classList.toggle('d-none');
+            document.getElementById('p5').classList.toggle('d-none');
+            document.getElementById('b4').classList.toggle('d-none');
+            document.getElementById('b5').classList.toggle('d-none');
+        }
+        function invisible5(){
+            document.getElementById('img5').classList.toggle('d-none');
+            document.getElementById('img6').classList.toggle('d-none');
+            document.getElementById('p5').classList.toggle('d-none');
+            document.getElementById('p6').classList.toggle('d-none');
+            document.getElementById('b5').classList.toggle('d-none');
+            document.getElementById('b6').classList.toggle('d-none');
+        }
+        function invisible6(){
+            document.getElementById('img6').classList.toggle('d-none');
+            document.getElementById('img7').classList.toggle('d-none');
+            document.getElementById('p6').classList.toggle('d-none');
+            document.getElementById('p7').classList.toggle('d-none');
+            document.getElementById('b6').classList.toggle('d-none');
+            document.getElementById('b7').classList.toggle('d-none');
+        }
+        function invisible7(){
+            document.getElementById('img7').classList.toggle('d-none');
+            document.getElementById('img1').classList.toggle('d-none');
+            document.getElementById('p7').classList.toggle('d-none');
+            document.getElementById('p1').classList.toggle('d-none');
+            document.getElementById('b7').classList.toggle('d-none');
+            document.getElementById('b1').classList.toggle('d-none');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
